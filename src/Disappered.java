@@ -13,7 +13,7 @@ public class Disappered {
             hs.add(num);
         }
         System.out.println(hs);
-        for(int i =1;i<nums.length+1;i++){
+        for(int i =0;i<nums.length;i++){
             if(!hs.contains(i)){
                 al.add(i);
             }
