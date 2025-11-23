@@ -7,7 +7,6 @@ public class ArraySum {
         for(int nums: arr){
             result = result.multiply(BigInteger.TEN).add(BigInteger.valueOf(nums));
         }
-        System.out.println(result);
         result  =result.add(BigInteger.ONE);
         String number = String.valueOf(result);
         char[] res =  number.toCharArray();
