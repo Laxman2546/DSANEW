@@ -29,6 +29,7 @@ class Node{
             current = current.next;
         }
         current.next = node;
+
     }
      public void Display() {
          if (head == null) {
@@ -42,7 +43,26 @@ class Node{
          }
          System.out.println("null");
      }
+    public void ReverseLL(){
+        Node current = head;
+        Node prev = null;
+        Node next =null;
+        if(head == null){
+            return ;
+        }
 
+        while(current != null){
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        while (current != null) {
+            System.out.print(prev.data + "=>");
+            current = current.next;
+        }
+
+    }
 
  }
 
@@ -53,7 +73,9 @@ public class LinkedList {
         Linked.insertFirst(24);
         Linked.insertFirst(36);
         Linked.insertFirst(48);
+        Linked.ReverseLL();
         Linked.Display();
+
 
     }
 }
