@@ -4,33 +4,40 @@ import java.util.Objects;
 import java.util.Stack;
 
 public class CountStudents {
-    public  static int  studentCount(int[] students,int[] sandwiches){
+    public static int studentCount(int[] students, int[] sandwiches) {
         int count = 0;
         Deque<Integer> dq = new ArrayDeque<>();
-        Stack<Integer> sk = new Stack<>();
-        for(int sandwich: sandwiches ){
-            sk.push(sandwich);
+        Deque<Integer> sk = new ArrayDeque<>();
+        for (int i=sandwiches.length-1;i>=0;i--) {
+            sk.push(sandwiches[i]);
         }
-        for(int student : students){
+        for (int student : students) {
             dq.add(student);
         }
-        for(int i=0; i<students.length;i++){
-            int stackPeek=  sk.peek();
+       while (!dq.isEmpty() && !sk.isEmpty()){
+            int stackPeek = sk.peek();
             int queuePeek = dq.peek();
-            if(stackPeek == queuePeek){
-                sk.pop();
+            if (stackPeek == queuePeek) {
                 dq.pollFirst();
-            }else{
-                dq.offerLast(students[i]);
+                sk.poll();
+                count = 0;
+            } else {
+                dq.pollFirst();
+                dq.addLast(queuePeek);
+                count++;
+            }
+            if(count == dq.size()){
+                break;
             }
         }
-        count = students.length;
+
         return count;
     }
-     public static void main(String[] args) {
-        int[] students = {1,1,0,0};
-        int[] sandwiches = {0,1,0,1};
-        int count = studentCount(students , sandwiches);
-         System.out.println(count);
+
+    public static void main(String[] args) {
+        int[] students = {1,1,1,0,0,1};
+        int[] sandwiches = {1,0,0,0,1,1};
+        int count = studentCount(students, sandwiches);
+        System.out.println(count);
     }
 }
