@@ -11,8 +11,8 @@ public class CountStudents {
         for (int i=sandwiches.length-1;i>=0;i--) {
             sk.push(sandwiches[i]);
         }
-        for (int student : students) {
-            dq.add(student);
+        for (int i=students.length-1; i>=0;i--) {
+            dq.add(students[i]);
         }
        while (!dq.isEmpty() && !sk.isEmpty()){
             int stackPeek = sk.peek();
@@ -35,8 +35,8 @@ public class CountStudents {
     }
 
     public static void main(String[] args) {
-        int[] students = {1,1,1,0,0,1};
-        int[] sandwiches = {1,0,0,0,1,1};
+        int[] students = {1,1,0,0};
+        int[] sandwiches = {0,1,0,1};
         int count = studentCount(students, sandwiches);
         System.out.println(count);
     }
