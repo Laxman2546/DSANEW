@@ -66,7 +66,7 @@ class Node{
 
  }
 
-public class LinkedList {
+public class LinkedList<S> {
     public static void main(String[] args) {
         LL Linked = new LL();
         Linked.insertFirst(12);
