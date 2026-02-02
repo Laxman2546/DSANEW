@@ -73,7 +73,7 @@ public class LinkedList<S> {
         Linked.insertFirst(24);
         Linked.insertFirst(36);
         Linked.insertFirst(48);
-        Linked.ReverseLL();
+//        Linked.ReverseLL();
         Linked.Display();
 
 
