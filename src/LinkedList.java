@@ -63,16 +63,27 @@ class Node{
         }
 
     }
+    public void insertLast(int data){
+        Node newnode = new Node(data);
+        if(head == null){
+            head = newnode;
+            return;
+        }
+        Node temp = head;
+        while(temp.next!= null){
+            temp=temp.next;
+        }
+            temp.next =newnode;
 
+    }
  }
 
 public class LinkedList<S> {
     public static void main(String[] args) {
         LL Linked = new LL();
-        Linked.insertFirst(12);
-        Linked.insertFirst(24);
-        Linked.insertFirst(36);
-        Linked.insertFirst(48);
+    Linked.insertLast(12);
+        Linked.insertLast(24);
+        Linked.insertLast(25);
 //        Linked.ReverseLL();
         Linked.Display();
 

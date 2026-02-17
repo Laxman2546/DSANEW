@@ -21,6 +21,7 @@ public class DivisibleThree {
         if (totalSum % 3 == 0) return totalSum;
         if (totalSum % 3 == 1) return totalSum - one_rem;
         return totalSum - two_rem;
+
     }
 
     public static void main(String[] args) {
