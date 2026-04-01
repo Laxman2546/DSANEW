@@ -17,7 +17,7 @@ public class CountFrequency {
         return ar;
     }
     public static HashMap<Character,Integer> frequencyHash(String str){
-        HashMap<Character, Integer> hm = new LinkedHashMap<>();
+        HashMap<Character, Integer> hm = new HashMap<>();
         for(int i=0;i<str.length();i++){
         hm.put(str.charAt(i),hm.getOrDefault(str.charAt(i),0)+1);
         }

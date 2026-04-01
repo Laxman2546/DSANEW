@@ -20,7 +20,7 @@ public class Binarysearch {
     }
    public static void main(String[] args) {
        int [] arr ={1,2,5,15,25,38,62};
-       int target = 150;
+       int target = 38;
       int idx = binarySearch(arr,target);
        System.out.println(idx);
     }

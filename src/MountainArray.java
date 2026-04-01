@@ -41,7 +41,7 @@ public class MountainArray {
             return i == n - 1;
     }
     public static void main(String[] args) {
-        int[] arr  = {2,1,2,3,5,7,9,10,12,14,15,16,18,14,13};
+        int[] arr  = {2,1,2,3,10,5,4,3,2,1};
         boolean isMountain = checkMountain(arr);
         System.out.println(isMountain);
     }

@@ -16,7 +16,7 @@ public class MoveZeroes {
         }
     }
     static void main(String[] args) {
-        int arr[] = {1,0,2,5,0,5,20,0,4,7,0,0,9};
+        int arr[] = {1,0,2,5,0,5,20,0,4,7,0,0,0};
         moveZero(arr);
         System.out.println(Arrays.toString(arr));
 
