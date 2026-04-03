@@ -34,12 +34,27 @@ class SelectionSort implements  sorting{
         }
     }
 }
+//{9,10,1,5,3,4,2};
+class InsertionSort implements sorting {
+    public void sortNumbers(int[] arr){
+        for(int i=1;i<arr.length;i++){
+            int temp = arr[i];
+            int j = i-1;
+            while (j>=0 && arr[j] > temp){
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = temp;
+        }
+    }
+}
 public class Bubblesort {
     public static void main(String[] args) {
         //bubble sort
             int[] arr ={5,3,4,2,1};
 //             new BubbleSort().sortNumbers(arr);
-                new SelectionSort().sortNumbers(arr);
+//                new SelectionSort().sortNumbers(arr);
+                new InsertionSort().sortNumbers(arr);
             System.out.println(Arrays.toString(arr));
     }
 }
