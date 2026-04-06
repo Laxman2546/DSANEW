@@ -12,6 +12,7 @@ public class ReverseNum {
     }
     public static  boolean isHappy(int n) {
         HashSet<Integer> hs = new HashSet<>();
+        System.out.println(squareSum(25));
         while (n != 0){
          n = squareSum(n);
         if (n == 1) return true;
@@ -25,6 +26,7 @@ public class ReverseNum {
 
     }
     public static void main(String[] args) {
-        System.out.println(isHappy(19));;
+//        System.out.println(isHappy(19));
+        System.out.println((int)(Math.random() *10000));
     }
 }
