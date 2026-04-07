@@ -8,6 +8,23 @@ class Minstack2{
         minSk = new Stack<>();
     }
 
+    public void push(int val) {
+        if(!minSk.isEmpty()){
+        int current = Math.min(minSk.peek(),val);
+        minSk.push(current);
+        sk.push(val);
+        }else{
+            sk.push(val);
+            minSk.push(val);
+        }
+
+    }
+
+    public void pop() {
+            sk.pop();
+            minSk.pop();
+    }
+
     public int top() {
         return sk.peek();
     }
