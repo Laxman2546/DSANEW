@@ -10,6 +10,18 @@ public class ReverseNum {
         }
         return res;
     }
+    public static boolean reveseNum(int n){
+        if(n < 0) return false;
+        int original = n;
+        int sum = 0;
+        while(n!=0){
+            int temp = n % 10;
+            sum = sum * 10 + temp;
+            n = n / 10;
+        }
+        System.out.println(sum);
+        return  original == sum;
+    }
     public static  boolean isHappy(int n) {
         HashSet<Integer> hs = new HashSet<>();
         System.out.println(squareSum(25));
@@ -27,6 +39,7 @@ public class ReverseNum {
     }
     public static void main(String[] args) {
 //        System.out.println(isHappy(19));
-        System.out.println((int)(Math.random() *10000));
+        System.out.println(reveseNum(121));
+//        System.out.println((int)(Math.random() *10000));
     }
 }
