@@ -1,7 +1,6 @@
 class Node{
      int data;
      Node next;
-
     public Node(int data){
         this.data = data;
         this.next = null;
@@ -13,7 +12,6 @@ class Node{
     public   void displayNode() {
         System.out.println(data);
     }
-
 }
 
  class LL{
@@ -77,7 +75,35 @@ class Node{
 
     }
  }
-
+//class Solution {
+//    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+//        // Create a dummy node to act as the starting point
+//        ListNode dummy = new ListNode(0);
+//        ListNode tail = dummy;
+//
+//        while (list1 != null && list2 != null) {
+//            // Compare the values of the two nodes
+//            if (list1.val <= list2.val) {
+//                tail.next = list1;   // Connect the smaller node
+//                list1 = list1.next;  // Move the pointer in list1
+//            } else {
+//                tail.next = list2;
+//                list2 = list2.next;
+//            }
+//            tail = tail.next; // Move the tail of our merged list forward
+//        }
+//
+//        // If one list is exhausted, attach the remainder of the other list
+//        if (list1 != null) {
+//            tail.next = list1;
+//        } else {
+//            tail.next = list2;
+//        }
+//
+//        // Return the actual head (the node after our dummy)
+//        return dummy.next;
+//    }
+//}
 public class LinkedList<S> {
     public static void main(String[] args) {
         LL Linked = new LL();

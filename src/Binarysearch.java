@@ -1,3 +1,4 @@
+import  java.util.LinkedList;
 public class Binarysearch {
     public static int binarySearch(int[] arr,int target){
         if(arr.length == 0){
@@ -21,7 +22,12 @@ public class Binarysearch {
    public static void main(String[] args) {
        int [] arr ={1,2,5,15,25,38,62};
        int target = 38;
-      int idx = binarySearch(arr,target);
-       System.out.println(idx);
+//      int idx = binarySearch(arr,target);
+//       System.out.println(idx);
+       LinkedList<Integer> ll = new LinkedList<>();
+       ll.add(12);
+       ll.add(24);
+       ll.add(44);
+       System.out.println(ll.peek());
     }
 }
