@@ -19,7 +19,7 @@ public class Subseq {
     }
     public static void main(String[] args) {
         String s = "abx";
-        String t = "ahbgdc";
+        String t = "ahbgdx";
         System.out.println(isSubsequence(s,t));
     }
 }

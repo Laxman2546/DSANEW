@@ -12,6 +12,7 @@ public class TargetArraay {
             hp.offer((long)value);
             sum+= value;
         }
+        //using heap problem
         while(!hp.isEmpty() &&hp.peek() > 1 ){
             long largest = hp.peek();hp.poll();
             long restSum = sum - largest;
