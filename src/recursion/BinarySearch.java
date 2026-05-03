@@ -17,4 +17,10 @@ public class BinarySearch {
         }
         return search(arr, target, st, mid-1);
     }
+
+    public static class Predictwinner {
+        public static void main(String[] args) {
+
+        }
+    }
 }
