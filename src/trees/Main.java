@@ -87,7 +87,6 @@ class Tree{
     public void addNode(int value){
         root = addEle(root,value);
     }
-
     private Node addEle(Node node, int value) {
         if(node == null){
            node = new Node(value);
