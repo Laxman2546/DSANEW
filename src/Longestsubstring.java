@@ -1,19 +1,21 @@
 public class Longestsubstring {
     public static void main(String[] args) {
-        String s = "forgeeksskeegfor";
+        String s = "geeks";
         System.out.println(longestPalindrome(s));
 
     }
 
     private static String longestPalindrome(String s) {
-        String newString = "";
         int left = 0;
-        for(int i=s.length()-1;i>=0;i--){
-            if(s.charAt(i) == s.charAt(left)){
-                newString += s.charAt(i);
+        int right = s.length()-1;
+        StringBuilder sk = new StringBuilder();
+        while(left < right){
+            if(s.charAt(left) ==  s.charAt(right)){
+                sk.append(s.charAt(left));
             }
+            right--;
             left++;
         }
-        return newString;
+        return sk.toString();
     }
 }
