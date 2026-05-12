@@ -163,9 +163,8 @@ public class Main {
 //        bin.createNode();
 //        bin.display();
         Tree tr = new Tree();
-        int[] nums = {1,2,3,4,5,6,7,8,9,10};
+        int[] nums = {3,5,2,1,4,6,7};
         tr.populate(nums);
-        tr.inOrder();
         tr.display();
     }
 }
