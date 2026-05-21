@@ -17,8 +17,6 @@ public class PrefixArr {
         HashSet<Integer> hs = new HashSet<>();
         while(l < A.length && r < B.length){
             if(A[l] == B[r]){
-                hs.add(A[0]);
-                hs.add(B[0]);
                 count++;
             }
 
