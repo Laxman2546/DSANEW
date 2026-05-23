@@ -11,6 +11,7 @@ public class ArraySum {
         String number = String.valueOf(result);
         char[] res =  number.toCharArray();
         int[] plusOne = new int[res.length];
+
         for(int i = 0 ;i<arr.length;i++){
             plusOne[i] = Character.getNumericValue(res[i]);
         }
