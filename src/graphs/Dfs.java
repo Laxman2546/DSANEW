@@ -51,6 +51,6 @@ public class Dfs {
         graph.get(4).add(3);
 
         System.out.println(graph);
-        dfs(graph);
+//        dfs(graph);
     }
 }

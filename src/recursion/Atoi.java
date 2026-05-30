@@ -3,17 +3,8 @@ package recursion;
 public class Atoi {
     public static void main(String[] args) {
         String s = "1337c0d3";
-        int res = myAtoi(s);
-        System.out.println(res);
-    }
-    public static int myAtoi(String s) {
-        return Integer.parseInt(atoi(s,0));
     }
 
-    private static String atoi(String s, int i) {
-        if(i == s.length() || s.charAt(i)!=)
-        atoi(s,i+1);
-    }
     public long power(long base, long exp) {
         long res = 1;
         long mod = 1_000_000_007;
