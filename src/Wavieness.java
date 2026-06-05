@@ -26,6 +26,7 @@ public class Wavieness {
                 count = count + 1;
             }
         }
+
         return  count;
     }
 }
