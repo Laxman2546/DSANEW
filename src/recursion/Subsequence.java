@@ -21,5 +21,15 @@ public class Subsequence {
         ls.removeLast();
         subseque(num,i-1,ls);
     }
-
+//    public List<List<Integer> sub(int i, List<List<Integer>> rs,int[] nums){
+//        List<Integer> ls = new ArrayList<>();
+//        if(i < 0){
+//            rs.add(ls);
+//            return rs;
+//        }
+//        ls.add(nums[i]);
+//        sub(i-1,rs,nums);
+//        ls.removeLast();
+//        sub(i-1,rs,nums);
+//    }
 }
