@@ -97,7 +97,35 @@ class Linked{
         reverseLL2(head,k);
         return head;
     }
+    public Node MiddleLL(){
+        if(head == null){
+            return null;
+        }
+        Node slow = head,fast = head;
+        while(fast!=null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        Node curr = slow,prev=null;
+        while(curr != null){
+            Node next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        int maxVal = 0;
+        Node start = head;
+        Node slowTemp = prev;
+        while(start != slow){
+            int val = start.data + slowTemp.data;
+            maxVal = Math.max(val,maxVal);
+            start = start.next;
+            slowTemp = slowTemp.next;
+        }
+        System.out.println(maxVal);
 
+        return head;
+    }
 }
 
 public class Main {
@@ -107,10 +135,10 @@ public class Main {
     ls.createLink(24);
     ls.createLink(36);
     ls.createLink(48);
-    ls.createLink(50);
     ls.display();
-    Node newHead = ls.reverseLL();
-    ls.display2(newHead);
-    Node newHead2 = ls.reverseLL2(newHead,3);
+    ls.MiddleLL();
+//    Node newHead = ls.reverseLL();
+//    ls.display2(newHead);
+//    Node newHead2 = ls.reverseLL2(newHead,3);
     }
 }
