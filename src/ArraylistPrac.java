@@ -19,6 +19,7 @@ public class ArraylistPrac {
         System.out.println(ls);
         System.out.println(ls.get(ls.size()-1));
 
+
     }
     public static List<Integer> pascalSame(int num){
         List<Integer> ls = new ArrayList<>();
