@@ -32,7 +32,7 @@ class Course{
         return haveCertificate;
     }
 }
-class Ipa54 {
+public class Ipa54 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Course[] courseArr = new Course[4];
