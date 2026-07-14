@@ -49,6 +49,23 @@ class Linked{
         }
         System.out.println("Null");
     }
+    public Node reverseLL3(Node head) {
+        if(head == null) return null;
+        Node temp = head;
+        Node prev = null;
+
+        Node next = temp.next;
+        while(temp!=null){
+            temp.next = prev;
+            prev = temp;
+            temp = next;
+            if(temp != null){
+                next = temp.next;
+            }
+
+        }
+        return prev;
+    }
     public Node reverseLL(){
         if(head == null){
             return null;
