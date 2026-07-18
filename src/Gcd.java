@@ -33,4 +33,22 @@ public class Gcd {
 
         return  even;
     }
+    public int findGCD(int[] nums) {
+        int largest = 0;
+        int smallest = Integer.MAX_VALUE;
+        for(int i=0;i<nums.length;i++){
+            largest = Math.max(largest,nums[i]);
+            smallest = Math.min(smallest,nums[i]);
+        }
+        return calcGcd(largest,smallest);
+    }
+    public int calcGcd(int a,int b){
+        while(a!=0){
+            if(b==0){
+                return a;
+            }
+            return calcGcd(b,a%b);
+        }
+        return b;
+    }
 }
