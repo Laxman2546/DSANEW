@@ -26,7 +26,7 @@ public class SmallestSubsequence {
         StringBuilder sb = new StringBuilder();
         while(!sk.isEmpty()){
             sb.append(sk.pop());
-        }git
+        }
         sb.reverse();
         return sb.toString();
     }
