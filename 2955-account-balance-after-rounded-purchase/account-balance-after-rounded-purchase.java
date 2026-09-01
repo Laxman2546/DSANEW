@@ -1,6 +1,7 @@
 class Solution {
     public int accountBalanceAfterPurchase(int purchaseAmount) {
         int a = 0;
+        if(purchaseAmount % 10 == 0) return 100 - purchaseAmount;
         for(int i=purchaseAmount;i<=100;i++){
             if(i % 10 == 0){
                 a = i;
