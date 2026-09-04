@@ -1,6 +1,6 @@
 class Solution {
     public int firstStableIndex(int[] nums, int k) {
-        // if(nums.length <= 1) return 0;
+        if(nums.length <= 1) return 0;
         int[] maxPre = new int[nums.length];
         int[] minSuff = new int[nums.length];
         int n = nums.length;
