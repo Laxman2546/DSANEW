@@ -7,8 +7,6 @@ class Solution {
         for(int j=n-2;j>=0;j--){
             minSuff[j] = Math.min(nums[j],minSuff[j+1]);
         }
-        System.out.println(Arrays.toString(minSuff));
-        int bestK = -1;
         int maxPre = 0;
         for(int m=0;m<nums.length;m++){
             maxPre = Math.max(nums[m],maxPre);
@@ -17,6 +15,6 @@ class Solution {
                 return m;
             }
         }
-        return bestK;
+        return -1;
     }
 }
