@@ -5,13 +5,12 @@ class Solution {
         for(int i=0;i<s.length();i++){
             if(s.charAt(i) == '('){
                 open++;
-            }else if(open <= 1 && s.charAt(i) == ')'){
+                if(open > 1)sk.append(s.charAt(i));
+            }else if(s.charAt(i) == ')'){
+                if(open > 1)sk.append(s.charAt(i));
                 open--;
             }
-            if(open > 1){
-                sk.append(s.charAt(i));
-                if(s.charAt(i) == ')')open--;
-            }
+           
         }
         return sk.toString();
     }
