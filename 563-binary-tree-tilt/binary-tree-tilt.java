@@ -14,23 +14,19 @@
  * }
  */
 class Solution {
+    int res = 0;
     public int findTilt(TreeNode root) {
-        List<Integer> res = new ArrayList<>();
-        solve(root,res);
-        int ans = 0;
-        for(int ls : res){
-            ans+= ls;
-        }
-        return ans;
+        solve(root);
+        return res;
     }
-    public int solve(TreeNode root,List<Integer> res){
+    public int solve(TreeNode root){
         if(root == null){
             return 0;
         }
-        int left = solve(root.left,res);
-        int right = solve(root.right,res);
+        int left = solve(root.left);
+        int right = solve(root.right);
         int val = Math.abs(left - right);
-        res.add(val);
+        res += val;
         root.val = root.val + left + right;
         return root.val;
     }
