@@ -7,7 +7,7 @@ class Solution {
             hs.put(fruits[i],hs.getOrDefault(fruits[i],0)+1);
             while(left < fruits.length && hs.size() > 2){
                 hs.put(fruits[left],hs.getOrDefault(fruits[left],0)-1);
-                if(hs.containsKey(fruits[left]) && hs.get(fruits[left]) == 0)hs.remove(fruits[left]);
+                if(hs.get(fruits[left]) == 0)hs.remove(fruits[left]);
                 left++;
             }
             maxSize = Math.max(maxSize,i - left + 1);
